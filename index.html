@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Componente Toast</title>
+
+    <link rel="stylesheet" href="css/componente.css">
+</head>
+
+<body>  
+    <header>
+        <h1>Notificaciones Toast</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Prueba del componente</h2>
+            <p>
+                Presiona uno de los botones para mostrar
+                diferentes notificaciones.
+            </p>
+
+            <button onclick="mostrarToast('Datos guardados correctamente', 'exito')">
+                Mostrar éxito
+            </button>
+
+            <button onclick="mostrarToast('Ocurrió un error', 'error')">
+                Mostrar error
+            </button>
+
+            <button onclick="mostrarToast('hola jeje', 'info')">
+                mostrar ola de mar
+            </button>
+
+            <button onclick="mostrarToast('Tienes una nueva notificación', 'info')">
+                Mostrar información
+            </button>
+
+        </section>
+    </main>
+    <script src="js/componente.js"></script>
+
+</body>
+</html>
