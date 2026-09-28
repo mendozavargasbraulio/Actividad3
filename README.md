@@ -2,41 +2,48 @@
 
 ## Portada
 
-Nombre: Componente visual reutilizable tipo Toast con JavaScript
+**Nombre:** Mendoza Vargas Braulio  
+**Componente:** Notificación Toast reutilizable
 
 ## ¿Qué problema resuelve?
 
-Este componente permite mostrar notificaciones visuales dentro de una página web sin tener que crear una estructura diferente cada vez.
+Este componente permite mostrar mensajes visuales dentro de una página web de forma rápida y reutilizable.
 
-Puede utilizarse para mostrar mensajes de éxito, error o información.
+Puede utilizarse para mostrar mensajes de:
 
-La finalidad es reutilizar el mismo componente cambiando únicamente el mensaje y el tipo de notificación.
+- Éxito
+- Error
+- Información
+
+El componente evita tener que crear una notificación diferente cada vez, ya que se reutiliza la misma función cambiando únicamente el mensaje y el tipo.
 
 ---
 
 # Instalación
 
-Para utilizar el componente se deben agregar los archivos CSS y JavaScript al documento HTML.
+Para utilizar el componente se deben incluir los archivos CSS y JavaScript dentro del proyecto HTML.
 
-CSS:
+## Incluir CSS
+
+Dentro de la etiqueta `<head>`:
 
 ```html
 <link rel="stylesheet" href="css/componente.css">
 ```
 
-JavaScript:
+## Incluir JavaScript
+
+Antes de cerrar la etiqueta `</body>`:
 
 ```html
 <script src="js/componente.js"></script>
 ```
 
-Después de incluir ambos archivos, el componente puede utilizarse desde JavaScript.
-
 ---
 
-# Ejemplo de uso
+# Uso
 
-La función principal es:
+La función principal del componente es:
 
 ```javascript
 mostrarToast(mensaje, tipo);
@@ -44,99 +51,75 @@ mostrarToast(mensaje, tipo);
 
 Recibe dos parámetros:
 
-- `mensaje`: texto que se mostrará en la notificación.
-- `tipo`: determina el estilo de la notificación.
+- `mensaje`: texto que aparecerá en la notificación.
+- `tipo`: determina el tipo de mensaje.
 
-Ejemplo de éxito:
+## Ejemplo de éxito
 
 ```javascript
 mostrarToast("Datos guardados correctamente", "exito");
 ```
 
-Ejemplo de error:
+## Ejemplo de error
 
 ```javascript
 mostrarToast("Ocurrió un error", "error");
 ```
 
-Ejemplo informativo:
+## Ejemplo de información
 
 ```javascript
 mostrarToast("Tienes una nueva notificación", "info");
 ```
 
----
+También puede utilizarse directamente desde un botón:
 
-# Reutilización
-
-El componente puede utilizarse varias veces sin modificar su código.
-
-Por ejemplo:
-
-```javascript
-mostrarToast("Usuario registrado", "exito");
-
-mostrarToast("Contraseña incorrecta", "error");
-
-mostrarToast("Sesión por terminar", "info");
+```html
+<button onclick="mostrarToast('Datos guardados correctamente', 'exito')">
+    Mostrar éxito
+</button>
 ```
 
-En los tres casos se utiliza la misma función, pero cambia el contenido y el tipo de notificación.
-
----
-
-# Funcionamiento
-
-El componente crea una notificación visual mediante JavaScript.
-
-La notificación:
-
-- Muestra un mensaje en pantalla.
-- Cambia de apariencia dependiendo del tipo.
-- Puede cerrarse mediante un botón.
-- Desaparece automáticamente después de unos segundos.
-
----
-
-# Estructura del proyecto
-
-```text
-actividad/
-│
-├── README.md
-├── index.html
-│
-├── css/
-│   └── componente.css
-│
-├── js/
-│   └── componente.js
-│
-└── img/
+```html
+<button onclick="mostrarToast('Ocurrió un error', 'error')">
+    Mostrar error
+</button>
 ```
+
+```html
+<button onclick="mostrarToast('Tienes una nueva notificación', 'info')">
+    Mostrar información
+</button>
+```
+
+De esta manera se reutiliza el mismo componente con distintos mensajes y tipos.
 
 ---
 
 # Capturas de pantalla
 
-Aquí se agregarán capturas del componente funcionando.
 
 ## Toast de éxito
 
-![exito](img/exito.png)
+![Toast de éxito](img/exito.png)
 
 ## Toast de error
 
-![error](img/error.png)
+![Toast de error](img/error.png)
 
 ## Toast informativo
 
-![info](img/info.png)
+![Toast informativo](img/info.png)
 
 ---
 
 # Video demostrativo
 
-jejeje
+En el video se muestra:
 
----
+- El problema que resuelve el componente.
+- Cómo se incluye el CSS y JavaScript.
+- Cómo se utiliza la función `mostrarToast()`.
+- El componente funcionando con diferentes mensajes.
+
+Video: jeje
